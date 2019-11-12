@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimary"
+    tools:context=".RegisterActivity">
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/imgProfilePic"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            app:civ_border_width="2dp"
+            app:civ_border_color="#fff"
+            app:layout_constraintBottom_toBottomOf="@+id/btnRegUploadPic"
+            app:layout_constraintEnd_toEndOf="@+id/btnRegUploadPic"
+            app:layout_constraintStart_toStartOf="@+id/btnRegUploadPic"
+            app:layout_constraintTop_toTopOf="@+id/btnRegUploadPic" />
+
+        <Button
+            android:id="@+id/btnRegUploadPic"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/profile_pic_bg"
+            android:padding="10dp"
+            android:text="@string/select_photo"
+            android:textAlignment="center"
+            android:textColor="@android:color/white"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <EditText
+            android:id="@+id/txtRegUsername"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/login_textfield_bg"
+            android:hint="@string/username"
+            android:inputType="text"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegUploadPic" />
+
+        <EditText
+            android:id="@+id/txtRegEmail"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/login_textfield_bg"
+            android:hint="@string/email"
+            android:inputType="textEmailAddress"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtRegUsername"
+            app:layout_constraintStart_toStartOf="@+id/txtRegUsername"
+            app:layout_constraintTop_toBottomOf="@+id/txtRegUsername" />
+
+
+        <EditText
+            android:id="@+id/txtRegPassword"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/login_textfield_bg"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="@+id/txtRegEmail"
+            app:layout_constraintStart_toStartOf="@+id/txtRegEmail"
+            app:layout_constraintTop_toBottomOf="@+id/txtRegEmail" />
+
+        <Button
+            android:id="@+id/btnRegister"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/custom_button"
+            android:fontFamily="sans-serif"
+            android:text="@string/Register"
+            android:textAllCaps="false"
+            android:textColor="#fff"
+            android:textSize="21sp"
+            app:layout_constraintEnd_toEndOf="@+id/txtRegPassword"
+            app:layout_constraintStart_toStartOf="@+id/txtRegPassword"
+            app:layout_constraintTop_toBottomOf="@+id/txtRegPassword" />
+
+        <TextView
+            android:id="@+id/lblRegToLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="16dp"
+            android:fontFamily="sans-serif"
+            android:text="@string/already_have_an_account"
+            android:textColor="#fff"
+            android:textSize="20sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnRegister" />
+
+    </android.support.constraint.ConstraintLayout>
+</RelativeLayout>
